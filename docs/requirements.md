@@ -20,8 +20,7 @@
 
 ## 1.3 Ссылки
 
-[REF-1] The Lagom — официальный сайт базы отдыха  
-https://thelagom.com
+[REF-1] [The Lagom](https://thelagom.com) — официальный сайт базы отдыха
 
 [REF-2] BPMN-модель текущего процесса бронирования (AS IS)
 
