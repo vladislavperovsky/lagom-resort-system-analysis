@@ -82,3 +82,7 @@
 - популярных услугах;
 - конверсии бронирования;
 - структуре доходов.
+
+## 2.3 Контекстная диаграмма
+
+![Context Diagram](https://github.com/vladislavperovsky/lagom-resort-system-analysis/blob/main/diagrams/context-diagram.png)
