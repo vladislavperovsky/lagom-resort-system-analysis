@@ -248,3 +248,8 @@
 
 - Обновляется статус бронирования  
 - Фиксируется решение администратора
+
+## 3.3 Use Case для сервиса "Допольнительные услуги"
+<p align="center">
+<img src="https://github.com/vladislavperovsky/lagom-resort-system-analysis/blob/main/diagrams/use-case-stay-management.svg">
+</p>
