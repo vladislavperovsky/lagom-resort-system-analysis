@@ -112,4 +112,4 @@
 
 ## 3.1 Use Case для сервиса "бронирование"
 
-![Use Case Booking](https://github.com/vladislavperovsky/lagom-resort-system-analysis/blob/main/diagrams/use-case-booking.jpg)
+![Use Case Booking](https://github.com/vladislavperovsky/lagom-resort-system-analysis/blob/main/diagrams/use-case-booking.svg)
