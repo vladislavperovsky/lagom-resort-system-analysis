@@ -112,7 +112,7 @@
 
 ## 3.1 Use Case для сервиса "Бронирование"
 <p align="center">
-![Use Case Booking](https://github.com/vladislavperovsky/lagom-resort-system-analysis/blob/main/diagrams/use-case-booking.svg)
+<img src="https://github.com/vladislavperovsky/lagom-resort-system-analysis/blob/main/diagrams/use-case-booking.svg">
 </p>
 
 ## 3.2 Варианты использования для сервиса "Бронирование"
