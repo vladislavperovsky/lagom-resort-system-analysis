@@ -113,3 +113,7 @@
 ## 3.1 Use Case для сервиса "бронирование"
 
 ![Use Case Booking](https://github.com/vladislavperovsky/lagom-resort-system-analysis/blob/main/diagrams/use-case-booking.svg)
+
+| Уникальный код и название | ВИ - 1: Создать бронирование |
+|----------|----------|
+| - | - |
