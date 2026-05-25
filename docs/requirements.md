@@ -576,16 +576,16 @@
 | Элемент данных | Описание | Тип данных | Значение |
 |----------|----------|----------|----------|
 | guest_id | Уникальный идентификатор гостя | INTEGER | > 0 |
-| full_name | ФИО гостя | VARCHAR(255) | Текст |
-| phone_number | Номер телефона | VARCHAR(20) | +79991234567 |
+| guest_full_name | ФИО гостя | VARCHAR(255) | Текст |
+| guest_phone_number | Номер телефона | VARCHAR(20) | +79991234567 |
 
 ### Администратор
 
 | Элемент данных | Описание | Тип данных | Значение |
 |----------|----------|----------|----------|
 | admin_id | Уникальный идентификатор администратора | INTEGER | > 0 |
-| full_name | ФИО администратора | VARCHAR(255) | Текст |
-| phone_number | Номер телефона | VARCHAR(20) | +79991234567 |
+| admin_full_name | ФИО администратора | VARCHAR(255) | Текст |
+| admin_phone_number | Номер телефона | VARCHAR(20) | +79991234567 |
 | email | Адрес электронной почты | VARCHAR(255) | user@example.com |
 | role | Роль администратора | VARCHAR(50) | Manager, Admin |
 
@@ -594,11 +594,11 @@
 | Элемент данных | Описание | Тип данных | Значение |
 |----------|----------|----------|----------|
 | accommodation_id | Уникальный идентификатор объекта размещения | INTEGER | > 0 |
-| name | Наименование объекта размещения | VARCHAR(255) | Домик №1 |
+| accommodation_name | Наименование объекта размещения | VARCHAR(255) | Домик №1 |
 | accommodation_type | Тип объекта размещения | VARCHAR(50) | Домик, Коттедж |
 | capacity | Вместимость | INTEGER | 1-20 |
-| description | Описание объекта размещения | VARCHAR(2000) | Текст |
-| price | Стоимость проживания за сутки | DECIMAL(10,2) | 10000.00 |
+| booking_description | Описание объекта размещения | VARCHAR(2000) | Текст |
+| accommodation_price | Стоимость проживания за сутки | DECIMAL(10,2) | 10000.00 |
 | availability_status | Статус доступности | VARCHAR(20) | Available, Unavailable |
 
 ### Бронирование
@@ -611,7 +611,7 @@
 | accommodation_id | Идентификатор объекта размещения | INTEGER | Ссылка на Accommodation |
 | check_in_date | Дата заезда | DATE | 2026-07-01 |
 | check_out_date | Дата выезда | DATE | 2026-07-05 |
-| status | Статус бронирования | VARCHAR(30) | Created, Paid, Confirmed, Cancelled |
+| booking_status_code | Статус бронирования | VARCHAR(30) | Created, Paid, Confirmed, Cancelled |
 | total_amount | Итоговая стоимость бронирования | DECIMAL(10,2) | 25000.00 |
 | created_at | Дата и время создания бронирования | TIMESTAMP | 2026-07-01 12:00:00 |
 
@@ -621,8 +621,8 @@
 |----------|----------|----------|----------|
 | service_id | Уникальный идентификатор услуги | INTEGER | > 0 |
 | service_name | Наименование услуги | VARCHAR(255) | Завтрак |
-| description | Описание услуги | VARCHAR(1000) | Текст |
-| price | Стоимость услуги | DECIMAL(10,2) | 500.00 |
+| service_description | Описание услуги | VARCHAR(1000) | Текст |
+| service_price | Стоимость услуги | DECIMAL(10,2) | 500.00 |
 | availability_status | Статус доступности услуги | VARCHAR(20) | Available, Unavailable |
 
 ### Заказ дополнительной услуги
@@ -634,7 +634,7 @@
 | service_id | Идентификатор услуги | INTEGER | Ссылка на Additional Service |
 | quantity | Количество заказанных услуг | INTEGER | > 0 |
 | total_amount | Итоговая стоимость заказа услуги | DECIMAL(10,2) | 1500.00 |
-| status | Статус заказа услуги | VARCHAR(30) | Created, Confirmed, Cancelled, Completed |
+| service_order_status_code | Статус заказа услуги | VARCHAR(30) | Created, Confirmed, Cancelled, Completed |
 | created_at | Дата и время создания заказа | TIMESTAMP | 2026-07-01 12:00:00 |
 
 ### Платёж
@@ -645,7 +645,7 @@
 | booking_id | Идентификатор бронирования | INTEGER | Ссылка на Booking |
 | amount | Сумма платежа | DECIMAL(10,2) | 15000.00 |
 | payment_datetime | Дата и время платежа | TIMESTAMP | 2026-07-01 12:00:00 |
-| status | Статус платежа | VARCHAR(30) | Pending, Success, Failed |
+| payment_status | Статус платежа | VARCHAR(30) | Pending, Success, Failed |
 | payment_method | Способ оплаты | VARCHAR(50) | Card, SBP |
 | external_id | Идентификатор платежа во внешней системе | VARCHAR(255) | pay_123456 |
 
